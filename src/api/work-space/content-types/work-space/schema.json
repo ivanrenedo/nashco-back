@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_spaces",
+  "info": {
+    "singularName": "work-space",
+    "pluralName": "work-spaces",
+    "displayName": "workSpace",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

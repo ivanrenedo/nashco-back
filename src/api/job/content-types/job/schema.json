@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "location": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "job_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-type.job-type"
+    },
+    "work_spaces": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work-space.work-space"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    }
+  }
+}
